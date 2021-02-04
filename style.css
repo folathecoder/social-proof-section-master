@@ -1,7 +1,7 @@
 h2 {
   font-family: "Spartan", sans-serif;
   font-size: 2.5rem;
-  colro: black;
+  color: #502050;
 }
 
 p {
@@ -10,12 +10,9 @@ p {
   line-height: 1.2rem;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: white;
+  height: 100vh;
   position: relative;
   margin: 0px;
   -webkit-box-sizing: border-box;
@@ -25,7 +22,7 @@ body {
 .container {
   max-width: 1000px;
   min-height: 400px;
-  margin: 100px auto;
+  margin: 20px auto;
 }
 
 .container1 {
@@ -43,15 +40,94 @@ body {
 }
 
 .container1_intro p {
-  color: black;
+  color: #502050;
+  margin-top: -10px;
 }
 
 .container1_ratings {
-  background-color: #a79581;
-  -webkit-box-flex: 600px;
-      -ms-flex: 600px;
-          flex: 600px;
-  min-height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 600px;
+          flex: 1 600px;
+  height: 180px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 0px 0px 150px;
+}
+
+.ratings {
+  background-color: #f7f2f7;
+  color: #502050;
+  font-weight: 800;
+  width: 320px;
+  text-align: center;
+}
+
+.ratings span {
+  margin-right: 10px;
+}
+
+.ratings_rate2 {
+  -webkit-animation: rate2 1s linear forwards;
+          animation: rate2 1s linear forwards;
+}
+
+@-webkit-keyframes rate2 {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+  }
+}
+
+@keyframes rate2 {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+  }
+}
+
+.ratings_rate3 {
+  -webkit-animation: rate3 1s linear forwards;
+          animation: rate3 1s linear forwards;
+}
+
+@-webkit-keyframes rate3 {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+}
+
+@keyframes rate3 {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
 }
 
 .container2 {
@@ -76,13 +152,57 @@ body {
 }
 
 .card_card2 {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  -webkit-animation: card2 1s linear forwards;
+          animation: card2 1s linear forwards;
+}
+
+@-webkit-keyframes card2 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes card2 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }
 
 .card_card3 {
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
+  -webkit-animation: card3 1s linear forwards;
+          animation: card3 1s linear forwards;
+}
+
+@-webkit-keyframes card3 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
+@keyframes card3 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
 }
 
 .profile {
@@ -110,8 +230,9 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
+  margin-top: 100px;
 }
 
 .attribution a {

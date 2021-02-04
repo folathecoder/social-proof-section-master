@@ -14,7 +14,7 @@ $FontGeneral: 'Spartan', sans-serif;
 h2 {
     font-family: $FontGeneral;
     font-size: 2.5rem;
-    colro: $colorDark;
+    color: $colorCardBg;
 }
 p {
     font-family: $FontGeneral;
@@ -22,11 +22,9 @@ p {
     line-height: 1.2rem;
 }
 
-html {
-    height: 100%;
-}
 body {
     background-color: $colorBg;
+    height: 100vh;
     position: relative;
     margin: 0px;
     box-sizing: border-box;
@@ -38,7 +36,7 @@ body {
     // background-color: red;
     max-width: 1000px;
     min-height: 400px;
-    margin: 100px auto;
+    margin: 20px auto;
 }
 .container1 {
     // background-color: yellow;
@@ -51,14 +49,52 @@ body {
         min-height: 40px;
 
         p {
-            color: saturate($colorDark, $amount: 50%);
+            color: $colorCardBg;
+            margin-top: -10px;
         }
     }
 
     &_ratings {
-        background-color: rgb(167, 149, 129);
-        flex: 600px;
-        min-height: 40px;
+        // background-color: rgb(167, 149, 129);
+        flex: 1 600px;
+        height: 180px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        justify-content: space-between;
+        padding: 0px 0px 0px 150px;
+    }
+}
+.ratings {
+    background-color: $colorRatingBg;
+    color: $colorCardBg;
+    font-weight: 800;
+    width: 320px;
+    text-align: center;
+
+    span {
+        margin-right: 10px;
+    }
+
+    &_rate1 {
+
+    }
+    &_rate2 {
+        animation: rate2 1s linear forwards;
+
+        @keyframes rate2 {
+            from {transform:translateX(0px)}
+            to {transform: translateX(60px)}
+        }
+    }
+    &_rate3 {
+        animation: rate3 1s linear forwards;
+
+        @keyframes rate3 {
+            from {transform:translateX(0px)}
+            to {transform: translateX(120px)}
+        }
     }
 }
 .container2 {
@@ -80,11 +116,21 @@ body {
     }
 
     &_card2 {
-        transform: translateY(20px);
+        animation: card2 1s linear forwards;
+
+        @keyframes card2 {
+            from {transform:translateY(0px)}
+            to {transform: translateY(20px)}
+        }
     }
 
     &_card3 {
-        transform: translateY(40px);
+        animation: card3 1s linear forwards;
+
+        @keyframes card3 {
+            from {transform:translateY(0px)}
+            to {transform: translateY(40px)}
+        }
     }
 
 }
@@ -125,8 +171,9 @@ body {
 
 
 .attribution {
-    font-size: 11px;
+    font-size: 1rem;
     text-align: center;
+    margin-top: 100px;
   }
   .attribution a {
     color: red;
