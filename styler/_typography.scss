@@ -1,0 +1,22 @@
+//colors
+$colorBg: hsl(0, 0%, 100%);
+$colorRatingBg: hsl(300, 24%, 96%);
+$colorCardBg: hsl(300, 43%, 22%);
+$colorCardFont: hsl(333, 80%, 67%);
+$colorDark: black;
+//Font
+$FontGeneral: 'Spartan', sans-serif;
+// Typography
+h2 {
+    font-family: $FontGeneral;
+    font-size: 2.5rem;
+    color: $colorCardBg;
+    @include media-query(mobile) {
+        font-size: 2rem;
+    }
+}
+p {
+    font-family: $FontGeneral;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+}

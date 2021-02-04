@@ -1,50 +1,5 @@
-//media queries
-
-@mixin media-query ($size) {
-    @if $size == desktop {
-        @media screen and (max-width: 1200px) {
-            @content;
-        }
-    }
-    @else if $size == tablet {
-        @media screen and (max-width: 992px) {
-            @content;
-        }
-    }
-    @else if $size == mobile {
-        @media screen and (max-width: 600px) {
-            @content;
-        }
-    }
-}
-
-//colors
-
-$colorBg: hsl(0, 0%, 100%);
-$colorRatingBg: hsl(300, 24%, 96%);
-$colorCardBg: hsl(300, 43%, 22%);
-$colorCardFont: hsl(333, 80%, 67%);
-$colorDark: black;
-
-//Font
-
-$FontGeneral: 'Spartan', sans-serif;
-
-// Typography
-h2 {
-    font-family: $FontGeneral;
-    font-size: 2.5rem;
-    color: $colorCardBg;
-
-    @include media-query(mobile) {
-        font-size: 2rem;
-    }
-}
-p {
-    font-family: $FontGeneral;
-    font-size: 0.75rem;
-    line-height: 1.2rem;
-}
+@import "styler/media-query";
+@import "styler/typography";
 
 body {
     background-color: $colorBg;
@@ -53,41 +8,30 @@ body {
     margin: 20px;
     box-sizing: border-box;
 }
-
 //main styling
-
 .container {
-    // background-color: red;
     max-width: 1000px;
     min-height: 400px;
     margin: 20px auto;
 }
 .container1 {
-    // background-color: yellow;
     min-height: 200px;
     display: flex;
-
     @include media-query(tablet) {
         flex-wrap: wrap;
     }
-
     &_intro {
-        // background-color: rgb(49, 207, 199);
         flex: 1 400px;
         min-height: 40px;
-
         @include media-query(tablet) {
             flex: 1 250px;
         }
-
         p {
             color: $colorCardBg;
             margin-top: -10px;
         }
     }
-
     &_ratings {
-        // background-color: rgb(167, 149, 129);
         flex: 1 600px;
         height: 180px;
         width: 100px;
@@ -96,7 +40,6 @@ body {
         margin-top: 50px;
         justify-content: space-between;
         padding: 0px 0px 0px 150px;
-
         @include media-query(tablet) {
             flex: 1 300px;
             padding: 0px;
@@ -110,34 +53,25 @@ body {
     font-weight: 800;
     width: 320px;
     text-align: center;
-
     span {
         margin-right: 10px;
     }
-
-    &_rate1 {
-
-    }
     &_rate2 {
         animation: rate2 1s linear forwards;
-
         @keyframes rate2 {
             from {transform:translateX(0px)}
             to {transform: translateX(60px)}
         }
-
         @include media-query(tablet) {
             animation: none;
         }
     }
     &_rate3 {
         animation: rate3 1s linear forwards;
-
         @keyframes rate3 {
             from {transform:translateX(0px)}
             to {transform: translateX(120px)}
         }
-
         @include media-query(tablet) {
             animation: none;
         }
@@ -149,7 +83,6 @@ body {
     justify-content: space-between;
     margin-top: 50px;
     box-sizing: border-box;
-
     @include media-query(tablet) {
         flex-wrap: wrap;
     }
@@ -160,7 +93,6 @@ body {
     padding: 30px 20px 20px 20px;
     background-color: $colorCardBg;
     color: $colorBg;
-
     @include media-query(tablet) {
         width: 40%;
         margin-bottom: 20px;
@@ -169,27 +101,18 @@ body {
         width: 100%;
         margin-bottom: 20px;
     }
-
-    &_card1 {
-
-    }
-
     &_card2 {
         animation: card2 1s linear forwards;
-
         @keyframes card2 {
             from {transform:translateY(0px)}
             to {transform: translateY(20px)}
         }
-
         @include media-query(tablet) {
             animation: none;
         }
     }
-
     &_card3 {
         animation: card3 1s linear forwards;
-
         @keyframes card3 {
             from {transform:translateY(0px)}
             to {transform: translateY(40px)}
@@ -198,14 +121,10 @@ body {
             animation: none;
         }
     }
-
 }
-
 .profile {
     display: flex;
-
     &_image {
-
         img {
             width: 37px;
             height: auto;
@@ -213,11 +132,9 @@ body {
             margin-right: 20px;
         }
     }
-
     &_author {
         font-size: 0.7rem;
         color: $colorCardFont;
-
         p:first-of-type {
             font-size: 0.8rem;
             margin: 0px 0px -10px 0px;
@@ -225,17 +142,6 @@ body {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 .attribution {
     font-size: 1rem;
     text-align: center;
