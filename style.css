@@ -1,0 +1,120 @@
+h2 {
+  font-family: "Spartan", sans-serif;
+  font-size: 2.5rem;
+  colro: black;
+}
+
+p {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  position: relative;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  min-height: 400px;
+  margin: 100px auto;
+}
+
+.container1 {
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container1_intro {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 400px;
+          flex: 1 400px;
+  min-height: 40px;
+}
+
+.container1_intro p {
+  color: black;
+}
+
+.container1_ratings {
+  background-color: #a79581;
+  -webkit-box-flex: 600px;
+      -ms-flex: 600px;
+          flex: 600px;
+  min-height: 40px;
+}
+
+.container2 {
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  width: 28%;
+  border-radius: 5px;
+  padding: 30px 20px 20px 20px;
+  background-color: #502050;
+  color: white;
+}
+
+.card_card2 {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.card_card3 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile_image img {
+  width: 37px;
+  height: auto;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.profile_author {
+  font-size: 0.7rem;
+  color: #ee68a4;
+}
+
+.profile_author p:first-of-type {
+  font-size: 0.8rem;
+  margin: 0px 0px -10px 0px;
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

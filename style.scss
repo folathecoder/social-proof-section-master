@@ -1,0 +1,133 @@
+//colors
+
+$colorBg: hsl(0, 0%, 100%);
+$colorRatingBg: hsl(300, 24%, 96%);
+$colorCardBg: hsl(300, 43%, 22%);
+$colorCardFont: hsl(333, 80%, 67%);
+$colorDark: black;
+
+//Font
+
+$FontGeneral: 'Spartan', sans-serif;
+
+// Typography
+h2 {
+    font-family: $FontGeneral;
+    font-size: 2.5rem;
+    colro: $colorDark;
+}
+p {
+    font-family: $FontGeneral;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+}
+
+html {
+    height: 100%;
+}
+body {
+    background-color: $colorBg;
+    position: relative;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+//main styling
+
+.container {
+    // background-color: red;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: 100px auto;
+}
+.container1 {
+    // background-color: yellow;
+    min-height: 200px;
+    display: flex;
+
+    &_intro {
+        // background-color: rgb(49, 207, 199);
+        flex: 1 400px;
+        min-height: 40px;
+
+        p {
+            color: saturate($colorDark, $amount: 50%);
+        }
+    }
+
+    &_ratings {
+        background-color: rgb(167, 149, 129);
+        flex: 600px;
+        min-height: 40px;
+    }
+}
+.container2 {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+.card {
+    width: 28%;
+    border-radius: 5px;
+    padding: 30px 20px 20px 20px;
+    background-color: $colorCardBg;
+    color: $colorBg;
+
+    &_card1 {
+
+    }
+
+    &_card2 {
+        transform: translateY(20px);
+    }
+
+    &_card3 {
+        transform: translateY(40px);
+    }
+
+}
+
+.profile {
+    display: flex;
+
+    &_image {
+
+        img {
+            width: 37px;
+            height: auto;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+    }
+
+    &_author {
+        font-size: 0.7rem;
+        color: $colorCardFont;
+
+        p:first-of-type {
+            font-size: 0.8rem;
+            margin: 0px 0px -10px 0px;
+            color: $colorBg;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: red;
+  }
