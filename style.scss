@@ -1,6 +1,7 @@
 @import "styler/media-query";
 @import "styler/typography";
 
+
 body {
     background-color: $colorBg;
     height: 100vh;
@@ -25,6 +26,9 @@ body {
         min-height: 40px;
         @include media-query(tablet) {
             flex: 1 250px;
+        }
+        @include media-query(mobile) {
+            text-align: center;
         }
         p {
             color: $colorCardBg;

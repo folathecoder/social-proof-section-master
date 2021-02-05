@@ -60,6 +60,12 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .container1_intro {
+    text-align: center;
+  }
+}
+
 .container1_intro p {
   color: #502050;
   margin-top: -10px;
